@@ -27,7 +27,8 @@ document.createElement("section");
 
 //Script for Scroll to Anchor
 $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
+   // applies only to anchor links in sections with class navbar
+  $('.navbar a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
